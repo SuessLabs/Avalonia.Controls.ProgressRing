@@ -1,0 +1,35 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:core="clr-namespace:Learn.AvaloniaProgressRing;assembly=Learn.AvaloniaProgressRing"
+        xmlns:local="using:Learn.AvaloniaProgressRing.Views"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Learn.AvaloniaProgressRing.Views.ShellWindow"
+        Background="Transparent"
+        Icon="/Assets/avalonia-logo.ico"
+        Width="900" Height="700"
+        TransparencyLevelHint="AcrylicBlur"
+        Title="{Binding Title}">
+
+  <Panel>
+    <ExperimentalAcrylicBorder IsHitTestVisible="False">
+      <ExperimentalAcrylicBorder.Material>
+        <ExperimentalAcrylicMaterial BackgroundSource="Digger"
+                                     TintColor="LightGray"
+                                     TintOpacity="1"
+                                     MaterialOpacity="0.65" />
+      </ExperimentalAcrylicBorder.Material>
+    </ExperimentalAcrylicBorder>
+
+    <Grid ColumnDefinitions="200,*" RowDefinitions="*,150">
+      <!-- Sidebar -->
+      <Panel Grid.Row="0" Grid.Column="0" Background="LightGray">
+        <Label Content="Hello" />
+      </Panel>
+
+    </Grid>
+  </Panel>
+</Window>
