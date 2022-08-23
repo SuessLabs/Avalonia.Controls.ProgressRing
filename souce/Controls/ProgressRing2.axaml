@@ -18,10 +18,11 @@
 -->
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:Learn.AvaloniaProgressRing.Controls"
->
+        xmlns:local="clr-namespace:Learn.AvaloniaProgressRing.Controls">
   <Design.PreviewWith>
-    <local:ProgressRing IsActive="True" />
+    <local:ProgressRing2 IsActive="True"
+                         Height="50" Width="50"
+                         Foreground="Blue" Background="White" />
   </Design.PreviewWith>
 
   <Style Selector="Ellipse.ProgressRingEllipseStyle">
@@ -31,7 +32,7 @@
     <Setter Property="VerticalAlignment" Value="Top" />
   </Style>
 
-  <Style Selector="local|ProgressRing">
+  <Style Selector="local|ProgressRing2">
     <Setter Property="Background" Value="Transparent" />
     <Setter Property="Foreground" Value="{TemplateBinding Foreground}" />
     <Setter Property="IsHitTestVisible" Value="False" />
@@ -108,7 +109,7 @@
       </Setter.Value>
     </Setter>
   </Style>
-  <Style Selector="local|ProgressRing:active /template/ Ellipse#E1"  >
+  <Style Selector="local|ProgressRing2:active /template/ Ellipse#E1"  >
     <Style.Animations>
       <Animation Duration="0:0:4.4" IterationCount="Infinite" Delay="0" FillMode="None">
         <KeyFrame KeyTime="0:0:0.001">
@@ -126,7 +127,7 @@
       </Animation>
     </Style.Animations>
   </Style>
-  <Style Selector="local|ProgressRing:active /template/ Ellipse#E2">
+  <Style Selector="local|ProgressRing2:active /template/ Ellipse#E2">
     <Style.Animations>
       <Animation Duration="0:0:4.4" IterationCount="Infinite" Delay="0:0:0.167" FillMode="None">
         <KeyFrame KeyTime="0:0:0.001">
@@ -144,7 +145,7 @@
       </Animation>
     </Style.Animations>
   </Style>
-  <Style Selector="local|ProgressRing:active /template/ Ellipse#E3">
+  <Style Selector="local|ProgressRing2:active /template/ Ellipse#E3">
     <Style.Animations>
       <Animation Duration="0:0:4.4" IterationCount="Infinite" Delay="0:0:0.334"  FillMode="None">
         <KeyFrame KeyTime="0:0:0.001">
@@ -162,7 +163,7 @@
       </Animation>
     </Style.Animations>
   </Style>
-  <Style Selector="local|ProgressRing:active /template/ Ellipse#E4">
+  <Style Selector="local|ProgressRing2:active /template/ Ellipse#E4">
     <Style.Animations>
       <Animation Duration="0:0:4.4" IterationCount="Infinite" Delay="0:0:0.501" FillMode="None">
         <KeyFrame KeyTime="0:0:0.001">
@@ -180,7 +181,7 @@
       </Animation>
     </Style.Animations>
   </Style>
-  <Style Selector="local|ProgressRing:active /template/ Ellipse#E5">
+  <Style Selector="local|ProgressRing2:active /template/ Ellipse#E5">
     <Style.Animations>
       <Animation Duration="0:0:4.4" IterationCount="Infinite" Delay="0:0:0.668" FillMode="None">
         <KeyFrame KeyTime="0:0:0.001">
@@ -198,7 +199,7 @@
       </Animation>
     </Style.Animations>
   </Style>
-  <Style Selector="local|ProgressRing:active /template/ Ellipse#E6">
+  <Style Selector="local|ProgressRing2:active /template/ Ellipse#E6">
     <Style.Animations>
       <Animation Duration="0:0:4.4" IterationCount="Infinite" Delay="0:0:0.835" FillMode="None">
         <KeyFrame KeyTime="0:0:0.001">
@@ -216,7 +217,7 @@
       </Animation>
     </Style.Animations>
   </Style>
-  <Style Selector="local|ProgressRing:active /template/ Canvas#E1R">
+  <Style Selector="local|ProgressRing2:active /template/ Canvas#E1R">
     <!--<Style.Setters>
       <Setter Property="Background" Value="LightBlue"/>
     </Style.Setters>-->
@@ -250,7 +251,7 @@
       </Animation>
     </Style.Animations>
   </Style>
-  <Style Selector="local|ProgressRing:active /template/ Canvas#E2R">
+  <Style Selector="local|ProgressRing2:active /template/ Canvas#E2R">
     <Style.Animations>
       <Animation Duration="0:0:4.4" IterationCount="Infinite" Delay="0:0:0.167"
                   FillMode="None">
@@ -281,7 +282,7 @@
       </Animation>
     </Style.Animations>
   </Style>
-  <Style Selector="local|ProgressRing:active /template/ Canvas#E3R">
+  <Style Selector="local|ProgressRing2:active /template/ Canvas#E3R">
     <Style.Setters>
       <Setter Property="IsVisible" Value="True"/>
     </Style.Setters>
@@ -315,7 +316,7 @@
       </Animation>
     </Style.Animations>
   </Style>
-  <Style Selector="local|ProgressRing:active /template/ Canvas#E4R">
+  <Style Selector="local|ProgressRing2:active /template/ Canvas#E4R">
     <Style.Setters>
       <Setter Property="IsVisible" Value="True"/>
     </Style.Setters>
@@ -349,7 +350,7 @@
       </Animation>
     </Style.Animations>
   </Style>
-  <Style Selector="local|ProgressRing:active /template/ Canvas#E5R">
+  <Style Selector="local|ProgressRing2:active /template/ Canvas#E5R">
     <Style.Setters>
       <Setter Property="IsVisible" Value="True"/>
     </Style.Setters>
@@ -383,7 +384,7 @@
       </Animation>
     </Style.Animations>
   </Style>
-  <Style Selector="local|ProgressRing:active /template/ Canvas#E6R">
+  <Style Selector="local|ProgressRing2:active /template/ Canvas#E6R">
     <Style.Setters>
       <Setter Property="IsVisible" Value="True"/>
     </Style.Setters>
@@ -418,12 +419,12 @@
     </Style.Animations>
   </Style>
 
-  <Style Selector="local|ProgressRing:small /template/ Canvas#E6R">
+  <Style Selector="local|ProgressRing2:small /template/ Canvas#E6R">
     <Style.Setters>
       <Setter Property="IsVisible" Value="False"/>
     </Style.Setters>
   </Style>
-  <Style Selector="local|ProgressRing:large /template/ Canvas#E6R">
+  <Style Selector="local|ProgressRing2:large /template/ Canvas#E6R">
     <Style.Setters>
       <Setter Property="IsVisible" Value="True"/>
     </Style.Setters>

@@ -9,5 +9,8 @@
   <prism:PrismApplication.Styles>
     <FluentTheme Mode="Light" />
     <!--<StyleInclude Source="avares://Learn.PrismAvalonia/Styles/Icons.axaml" />-->
+    
+    <StyleInclude Source="avares://Learn.AvaloniaProgressRing/Controls/ProgressRing.axaml"/>
+    <StyleInclude Source="avares://Learn.AvaloniaProgressRing/Controls/ProgressRing2.axaml"/>
   </prism:PrismApplication.Styles>
 </prism:PrismApplication>

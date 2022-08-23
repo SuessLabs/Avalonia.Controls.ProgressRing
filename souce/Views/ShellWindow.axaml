@@ -24,20 +24,27 @@
     </ExperimentalAcrylicBorder>
 
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-      <Label Content="Hello" />
-      
+      <Label Content="Hello"
+             Height="60"
+             Width="60" />
+
+      <ctrl:ProgressRing2 IsActive="True"
+                          Width="60"
+                          Height="60"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Center"
+                          Foreground="Green" />
+
+      <!--
+        Settings:
+        * EllipseDiameterScale="1"   Makes circles bigger
+      -->
       <ctrl:ProgressRing IsActive="True"
-                         Background="White"
-                         Foreground="Blue"
-                         Height="60"
-                         Width="60"
                          MinWidth="20"
                          MinHeight="20"
+                         Foreground="Blue"
                          HorizontalContentAlignment="Center"
-                         VerticalContentAlignment="Center"
-                         EllipseDiameterScale="10"
-                         BorderThickness="1"
-                         BorderBrush="Beige" />
+                         VerticalContentAlignment="Center" />
 
       <Button Content="Start" />
       <Button Content="Stop" />

@@ -19,8 +19,7 @@ namespace Learn.AvaloniaProgressRing.Controls
 
     static ProgressRing2()
     {
-      //DefaultStyleKeyProperty.OverrideMetadata(typeof(ProgressRing),
-      //    new FrameworkPropertyMetadata(typeof(ProgressRing)));
+      // DefaultStyleKeyProperty.OverrideMetadata(typeof(ProgressRing), new FrameworkPropertyMetadata(typeof(ProgressRing)));
     }
 
     public ProgressRing2()
@@ -36,15 +35,15 @@ namespace Learn.AvaloniaProgressRing.Controls
     }
 
     public static readonly StyledProperty<bool> IsActiveProperty =
-        AvaloniaProperty.Register<ProgressRing, bool>(nameof(IsActive), defaultValue: true, notifying: OnIsActiveChanged);
+        AvaloniaProperty.Register<ProgressRing2, bool>(nameof(IsActive), defaultValue: true, notifying: OnIsActiveChanged);
 
     private static void OnIsActiveChanged(IAvaloniaObject obj, bool arg2)
     {
-      ((ProgressRing)obj).UpdateVisualStates();
+      ((ProgressRing2)obj).UpdateVisualStates();
     }
 
-    public static readonly DirectProperty<ProgressRing, double> MaxSideLengthProperty =
-        AvaloniaProperty.RegisterDirect<ProgressRing, double>(
+    public static readonly DirectProperty<ProgressRing2, double> MaxSideLengthProperty =
+        AvaloniaProperty.RegisterDirect<ProgressRing2, double>(
            nameof(MaxSideLength),
            o => o.MaxSideLength);
 
@@ -54,8 +53,8 @@ namespace Learn.AvaloniaProgressRing.Controls
       private set { SetAndRaise(MaxSideLengthProperty, ref _maxSideLength, value); }
     }
 
-    public static readonly DirectProperty<ProgressRing, double> EllipseDiameterProperty =
-        AvaloniaProperty.RegisterDirect<ProgressRing, double>(
+    public static readonly DirectProperty<ProgressRing2, double> EllipseDiameterProperty =
+        AvaloniaProperty.RegisterDirect<ProgressRing2, double>(
            nameof(EllipseDiameter),
            o => o.EllipseDiameter);
 
@@ -65,8 +64,8 @@ namespace Learn.AvaloniaProgressRing.Controls
       private set { SetAndRaise(EllipseDiameterProperty, ref _ellipseDiameter, value); }
     }
 
-    public static readonly DirectProperty<ProgressRing, Thickness> EllipseOffsetProperty =
-        AvaloniaProperty.RegisterDirect<ProgressRing, Thickness>(
+    public static readonly DirectProperty<ProgressRing2, Thickness> EllipseOffsetProperty =
+        AvaloniaProperty.RegisterDirect<ProgressRing2, Thickness>(
            nameof(EllipseOffset),
            o => o.EllipseOffset);
 
