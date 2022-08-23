@@ -53,8 +53,6 @@ namespace Learn.AvaloniaProgressRing
     {
       // Services
       ////containerRegistry.RegisterSingleton<ILogService, LogService>();
-      ////containerRegistry.RegisterSingleton<IJsonService, JsonService>();
-      ////containerRegistry.RegisterSingleton<IPreferenceService, PreferenceService>();
 
       // Views - Generic views
       containerRegistry.Register<ShellWindow>();

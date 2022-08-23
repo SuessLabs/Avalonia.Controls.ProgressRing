@@ -2,15 +2,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:core="clr-namespace:Learn.AvaloniaProgressRing;assembly=Learn.AvaloniaProgressRing"
-        xmlns:local="using:Learn.AvaloniaProgressRing.Views"
+        xmlns:ctrl="clr-namespace:Learn.AvaloniaProgressRing.Controls;assembly=Learn.AvaloniaProgressRing"
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="250"
         x:Class="Learn.AvaloniaProgressRing.Views.ShellWindow"
         Background="Transparent"
         Icon="/Assets/avalonia-logo.ico"
-        Width="900" Height="700"
+        Width="400" Height="250"
         TransparencyLevelHint="AcrylicBlur"
         Title="{Binding Title}">
 
@@ -24,12 +23,24 @@
       </ExperimentalAcrylicBorder.Material>
     </ExperimentalAcrylicBorder>
 
-    <Grid ColumnDefinitions="200,*" RowDefinitions="*,150">
-      <!-- Sidebar -->
-      <Panel Grid.Row="0" Grid.Column="0" Background="LightGray">
-        <Label Content="Hello" />
-      </Panel>
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+      <Label Content="Hello" />
+      
+      <ctrl:ProgressRing IsActive="True"
+                         Background="White"
+                         Foreground="Blue"
+                         Height="60"
+                         Width="60"
+                         MinWidth="20"
+                         MinHeight="20"
+                         HorizontalContentAlignment="Center"
+                         VerticalContentAlignment="Center"
+                         EllipseDiameterScale="10"
+                         BorderThickness="1"
+                         BorderBrush="Beige" />
 
-    </Grid>
+      <Button Content="Start" />
+      <Button Content="Stop" />
+    </StackPanel>
   </Panel>
 </Window>
