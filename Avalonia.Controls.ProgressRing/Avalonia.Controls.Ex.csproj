@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
+    <ImplicitUsings>disabled</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>0.5.0</Version>
+    <Authors>Suess Labs, Damian Suess</Authors>
+    <Description>Progress Ring user control for Avalonia based on MahApps.Metro.</Description>
+    <Copyright>2022 Xeno Innovations, Inc.</Copyright>
+    <PackageProjectUrl>https://github.com/DamianSuess/Avalonia.Controls.ProgressRing/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/DamianSuess/Avalonia.Controls.ProgressRing.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Avalonia, ProgressRing, Control, Progress, Ring</PackageTags>
+    <PackageId>Avalonia.Controls.Ex</PackageId>
+    <BaseOutputPath>..\output</BaseOutputPath>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.18" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ProgressRing.axaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ProgressRing.axaml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+
+</Project>
