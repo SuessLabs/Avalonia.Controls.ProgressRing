@@ -11,8 +11,8 @@
     <Authors>Suess Labs, Damian Suess</Authors>
     <Description>Progress Ring user control for Avalonia based on MahApps.Metro.</Description>
     <Copyright>2022 Xeno Innovations, Inc.</Copyright>
-    <PackageProjectUrl>https://github.com/DamianSuess/Avalonia.Controls.ProgressRing/</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/DamianSuess/Avalonia.Controls.ProgressRing.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/SuessLabs/Avalonia.Controls.ProgressRing/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/SuessLabs/Avalonia.Controls.ProgressRing.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Avalonia, ProgressRing, Control, Progress, Ring</PackageTags>
     <PackageId>Avalonia.Controls.ProgressRing</PackageId>

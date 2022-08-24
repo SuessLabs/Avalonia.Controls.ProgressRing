@@ -1,5 +1,7 @@
 # Avalonia ProgressRing
 
+Cross-platform ProgressRing user control for Avalonia applications, supporting .NET 5 and .NET 6
+
 ## References
 
 * ProgressRing PRs
