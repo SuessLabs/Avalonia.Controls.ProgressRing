@@ -212,7 +212,7 @@
                 MaxHeight="{Binding MaxSideLength, RelativeSource={RelativeSource Mode=TemplatedParent}}"
                 Margin="{TemplateBinding Padding}"
                 Background="Transparent"
-                IsVisible="{Binding IsActive}"
+                IsVisible="{Binding IsActive, RelativeSource={RelativeSource Mode=TemplatedParent}}"
                 RenderTransformOrigin="50%,50%">
 
             <Canvas Name="e1" RenderTransformOrigin="50%,50%">

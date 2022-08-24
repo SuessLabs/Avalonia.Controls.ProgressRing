@@ -8,34 +8,21 @@ namespace Avalonia.Controls.ProgressRing
 {
   /// <summary><see cref="ProgressRing"/> provides a Windows 10 styled circular loading animation.</summary>
   /// <remarks>
-  ///   * https://github.com/AvaloniaUI/Documentation/blob/master/docs/authoring-controls/defining-properties.md
-  ///   * Adapted from MahApps Metro: https://github.com/MahApps/MahApps.Metro/blob/develop/src/MahApps.Metro/Controls/ProgressRing.cs.
+  ///   https://github.com/AvaloniaUI/Documentation/blob/master/docs/authoring-controls/defining-properties.md
   /// </remarks>
   public class ProgressRing : ContentControl
   {
-    public static readonly AvaloniaProperty EllipseDiameterProperty =
+    public static readonly AvaloniaProperty<double> EllipseDiameterProperty =
         AvaloniaProperty.Register<ProgressRing, double>(nameof(EllipseDiameter), inherits: true);
 
-    public static readonly AvaloniaProperty EllipseDiameterScaleProperty =
+    public static readonly AvaloniaProperty<double> EllipseDiameterScaleProperty =
         AvaloniaProperty.Register<ProgressRing, double>(nameof(EllipseDiameterScale), inherits: true, defaultValue: 1D);
 
-    public static readonly AvaloniaProperty EllipseOffsetProperty =
+    public static readonly AvaloniaProperty<Thickness> EllipseOffsetProperty =
         AvaloniaProperty.Register<ProgressRing, Thickness>(nameof(EllipseOffset), inherits: true);
 
-    public static readonly StyledProperty<bool> IsActiveProperty = AvaloniaProperty.Register<ProgressRing, bool>(nameof(IsActive));
-
-    ////public static readonly AvaloniaProperty IsActiveProperty = AvaloniaProperty.RegisterAttached<ProgressRing, bool>(nameof(IsActive), typeof(bool));
-
-    ////public static readonly DirectProperty<ProgressRing, bool> IsActiveProperty = AvaloniaProperty.RegisterDirect<ProgressRing, bool>(
-    ////    nameof(IsActive),
-    ////    o => o.IsActive,
-    ////    (o, v) => o.IsActive = v);
-
-    ////public static readonly AvaloniaProperty IsActiveProperty = AvaloniaProperty.Register<ProgressRing, bool>(nameof(IsActive), defaultValue: true, notifying: OnIsActiveChanged);
-    ////private static void OnIsActiveChanged(IAvaloniaObject obj, bool arg2)
-    ////{
-    ////  ((ProgressRing)obj).Refresh();
-    ////}
+    public static readonly StyledProperty<bool> IsActiveProperty =
+      AvaloniaProperty.Register<ProgressRing, bool>(nameof(IsActive));
 
     public static readonly AvaloniaProperty MaxSideLengthProperty =
         AvaloniaProperty.Register<ProgressRing, double>(nameof(MaxSideLength), inherits: true);
@@ -50,8 +37,6 @@ namespace Avalonia.Controls.ProgressRing
         SetEllipseOffset(rect.Width);
         SetMaxSideLength(rect.Width);
       }).DisposeWith(_disposable);
-
-      //// IsActiveProperty.Changed.Subscribe(args => OnIsActiveChanged(args?.Sender, args));
     }
 
     public double EllipseDiameter
@@ -97,18 +82,6 @@ namespace Avalonia.Controls.ProgressRing
     private void SetMaxSideLength(double width)
     {
       MaxSideLength = width <= 20 ? 20 : width;
-    }
-
-    private void OnIsActiveChanged(IAvaloniaObject? sender, AvaloniaPropertyChangedEventArgs? args)
-    ////private void OnIsActiveChanged(IAvaloniaObject? sender, bool? args)
-    {
-      ProgressRing? progRing = sender as ProgressRing;
-      if (progRing != null)
-        progRing.Refresh();
-    }
-
-    private void Refresh()
-    {
     }
   }
 }
