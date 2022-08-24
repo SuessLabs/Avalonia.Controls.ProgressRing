@@ -3,18 +3,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ctrl="clr-namespace:Avalonia.Controls.ProgressRing;assembly=Avalonia.Controls.ProgressRing"
-        xmlns:local="clr-namespace:Learn.AvaloniaProgressRing.Controls;assembly=Learn.AvaloniaProgressRing"
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="250"
         x:Class="Learn.AvaloniaProgressRing.Views.ShellWindow"
-        Background="Transparent"
         Icon="/Assets/avalonia-logo.ico"
         Width="400" Height="250"
         TransparencyLevelHint="AcrylicBlur"
+        Background="Transparent"
         Title="{Binding Title}">
-
-  <Panel>
+  <Grid>
     <ExperimentalAcrylicBorder IsHitTestVisible="False">
       <ExperimentalAcrylicBorder.Material>
         <ExperimentalAcrylicMaterial BackgroundSource="Digger"
@@ -25,30 +23,22 @@
     </ExperimentalAcrylicBorder>
 
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-      <Label Content="Hello"
-             Height="60"
-             Width="60" />
-
       <!--
         Settings:
-        * EllipseDiameterScale="1"   Makes circles bigger
+        * IsActive=(BOOL)                Hide/Show animation
+        * EllipseDiameterScale=(DOUBLE)  Makes circles bigger (Default="1.0")
       -->
-      <ctrl:ProgressRing IsActive="{Binding IsLoading}"
-                         MinWidth="20"
-                         MinHeight="20"
-                         Foreground="Blue"
-                         HorizontalContentAlignment="Center"
-                         VerticalContentAlignment="Center" />
+      <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+        <ctrl:ProgressRing IsActive="{Binding IsLoading}" Width="15" Height="15" Foreground="Green" />
+        <ctrl:ProgressRing IsActive="{Binding IsLoading}" Foreground="Red" />
+        <ctrl:ProgressRing IsActive="{Binding IsLoading}" Foreground="Blue" EllipseDiameterScale="1.8" />
+        <ctrl:ProgressRing IsActive="{Binding IsLoading}" Width="15" Height="15" />
+      </StackPanel>
 
-      <local:ProgressRing2 IsActive="{Binding IsLoading}"
-                          Width="60"
-                          Height="60"
-                          HorizontalAlignment="Center"
-                          VerticalAlignment="Center"
-                          Foreground="Green" />
-
-      <Button Content="Start" Command="{Binding CmdStart}" />
-      <Button Content="Stop" Command="{Binding CmdStop}" />
+      <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+        <Button Content="Start" Command="{Binding CmdStart}" />
+        <Button Content="Stop" Command="{Binding CmdStop}" />
+      </StackPanel>
     </StackPanel>
-  </Panel>
+  </Grid>
 </Window>

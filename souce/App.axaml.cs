@@ -1,6 +1,5 @@
 ﻿using Avalonia;
 using Avalonia.Markup.Xaml;
-using Learn.AvaloniaProgressRing.ViewModels;
 using Learn.AvaloniaProgressRing.Views;
 using Prism.DryIoc;
 using Prism.Ioc;

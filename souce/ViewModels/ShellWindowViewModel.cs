@@ -8,7 +8,7 @@ namespace Learn.AvaloniaProgressRing.ViewModels
 
     public ShellWindowViewModel()
     {
-      Title = "Sample Prism.Avalonia - Navigation";
+      Title = "Avalonia ProgressRing - Using Prism.Avalonia";
 
       IsLoading = true;
     }
