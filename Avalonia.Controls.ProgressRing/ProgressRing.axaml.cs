@@ -54,7 +54,7 @@ namespace Avalonia.Controls.ProgressRing
     public Thickness EllipseOffset
     {
       get => (Thickness)GetValue(EllipseOffsetProperty);
-      private set => SetValue(EllipseOffsetProperty, value);
+      private set => SetAndRaise(EllipseOffsetProperty, value);
     }
 
     public bool IsActive

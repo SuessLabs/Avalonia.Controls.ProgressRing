@@ -14,6 +14,4 @@ Cross-platform ProgressRing user control for Avalonia applications, supporting .
 * [Avalonia - Defining Properties](https://docs.avaloniaui.net/docs/authoring-controls/defining-properties)
 * [Prism.Avalonia](https://github.com/AvaloniaCommunity/Prism.Avalonia)
 * Other Rings
-  * [WPF - MahApps](https://github.com/MahApps/MahApps.Metro/blob/develop/src/MahApps.Metro/Controls/ProgressRing.cs)
-  * [Deadpikle - ProgressRing](https://github.com/Deadpikle/AvaloniaProgressRing)
-  * [Aura.UI - ProgressRing](https://github.com/PieroCastillo/Aura.UI/tree/master/src/Aura.UI/Controls/ProgressRing)
+  * [MahApps (WPF)](https://github.com/MahApps/MahApps.Metro/blob/develop/src/MahApps.Metro/Controls/ProgressRing.cs), [Deadpikle](https://github.com/Deadpikle/AvaloniaProgressRing), [Aura.UI](https://github.com/PieroCastillo/Aura.UI/tree/master/src/Aura.UI/Controls/ProgressRing)
