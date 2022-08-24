@@ -2,7 +2,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:ctrl="clr-namespace:Learn.AvaloniaProgressRing.Controls;assembly=Learn.AvaloniaProgressRing"
+        xmlns:ctrl="clr-namespace:Avalonia.Controls.Ex;assembly=Avalonia.Controls.Ex"
+        xmlns:local="clr-namespace:Learn.AvaloniaProgressRing.Controls;assembly=Learn.AvaloniaProgressRing"
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="250"
@@ -28,26 +29,26 @@
              Height="60"
              Width="60" />
 
-      <ctrl:ProgressRing2 IsActive="True"
-                          Width="60"
-                          Height="60"
-                          HorizontalAlignment="Center"
-                          VerticalAlignment="Center"
-                          Foreground="Green" />
-
       <!--
         Settings:
         * EllipseDiameterScale="1"   Makes circles bigger
       -->
-      <ctrl:ProgressRing IsActive="True"
+      <ctrl:ProgressRing IsActive="{Binding IsLoading}"
                          MinWidth="20"
                          MinHeight="20"
                          Foreground="Blue"
                          HorizontalContentAlignment="Center"
                          VerticalContentAlignment="Center" />
 
-      <Button Content="Start" />
-      <Button Content="Stop" />
+      <local:ProgressRing2 IsActive="{Binding IsLoading}"
+                          Width="60"
+                          Height="60"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Center"
+                          Foreground="Green" />
+
+      <Button Content="Start" Command="{Binding CmdStart}" />
+      <Button Content="Stop" Command="{Binding CmdStop}" />
     </StackPanel>
   </Panel>
 </Window>
