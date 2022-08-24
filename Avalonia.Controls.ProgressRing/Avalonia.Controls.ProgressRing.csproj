@@ -15,7 +15,7 @@
     <RepositoryUrl>https://github.com/DamianSuess/Avalonia.Controls.ProgressRing.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Avalonia, ProgressRing, Control, Progress, Ring</PackageTags>
-    <PackageId>Avalonia.Controls.Ex</PackageId>
+    <PackageId>Avalonia.Controls.ProgressRing</PackageId>
     <BaseOutputPath>..\output</BaseOutputPath>
 
   </PropertyGroup>

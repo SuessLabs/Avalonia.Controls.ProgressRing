@@ -4,7 +4,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.Mixins;
 
-namespace Avalonia.Controls.Ex
+namespace Avalonia.Controls.ProgressRing
 {
   /// <summary><see cref="ProgressRing"/> provides a Windows 10 styled circular loading animation.</summary>
   /// <remarks>
