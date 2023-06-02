@@ -73,7 +73,8 @@ namespace Avalonia.Controls.ProgressRing
 
     private void SetEllipseDiameter(double width)
     {
-      EllipseDiameter = (width / 8) * EllipseDiameterScale;
+      // OG: EllipseDiameter = (width / 8) * EllipseDiameterScale;
+      EllipseDiameter = (width / 5) * EllipseDiameterScale;
     }
 
     private void SetEllipseOffset(double width)
