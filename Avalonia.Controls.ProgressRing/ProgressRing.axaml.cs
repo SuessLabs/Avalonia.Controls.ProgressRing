@@ -12,6 +12,8 @@ namespace Avalonia.Controls.ProgressRing
   /// </remarks>
   public class ProgressRing : ContentControl
   {
+    private Thickness _ellipseOffset;
+
     public static readonly AvaloniaProperty<double> EllipseDiameterProperty =
         AvaloniaProperty.Register<ProgressRing, double>(nameof(EllipseDiameter), inherits: true);
 
@@ -53,8 +55,8 @@ namespace Avalonia.Controls.ProgressRing
 
     public Thickness EllipseOffset
     {
-      get => (Thickness)GetValue(EllipseOffsetProperty);
-      private set => SetAndRaise(EllipseOffsetProperty, value);
+      get => _ellipseOffset;
+      private set => SetAndRaise(EllipseOffsetProperty, ref _ellipseOffset, value);
     }
 
     public bool IsActive
